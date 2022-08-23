@@ -28,4 +28,4 @@ jobs:
  
     - name: run test
       run: |
-        pytest test_login.py
+        pytest //faru_dev_automation//src//testCases//test_login.py
