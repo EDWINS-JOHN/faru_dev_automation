@@ -10,20 +10,17 @@ class Test_Faru01_Login:
     baseURL = ReadConfig.getAppUrl()
     email = ReadConfig.getEmail()
     password = ReadConfig.getPassword()
-    
-    logger = LogGen.loggen()
+
 
     def test_homePageTitle(self,setup):
-        
-        self.logger.info("*******************Test_Faru01_Login************")
-        self.logger.info("*******************Checking  Homepage Title************")
+
         self.driver=setup
         self.driver.get(self.baseURL)
         actual_title=self.driver.title
         if actual_title == "Faru":
             assert True
             self.driver.close()
-            self.logger.info("*******************Test passed************")
+            
         else:
             self.driver.save_screenshot("..\\ScreenShots\\"+"test_homePagetitle.png")
             self.driver.close()
@@ -43,7 +40,7 @@ class Test_Faru01_Login:
             time.sleep(3)
             self.driver.close()
             
-            self.logger.info("*******************Login Test Passed************")
+
         else:
             self.driver.save_screenshot("..\\ScreenShots\\"+"test_login.png")
             self.driver.close()
