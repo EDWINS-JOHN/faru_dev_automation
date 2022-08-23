@@ -28,4 +28,4 @@ jobs:
  
     - name: run test
       run: |
-        pytest 
+        pytest test_login.py
